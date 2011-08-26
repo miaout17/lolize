@@ -2,8 +2,9 @@ require 'lolcat'
 
 module Lolize
   def self.write(s)
-    s.split.each_with_index do |line, index|
-      lol_write(s)
+    s.lines.each_with_index do |line, index|
+      lol_write(line)
+      raw_write("\n") if line=="\n"
     end
   end
 
@@ -34,7 +35,7 @@ end
 
 module Lol
   def self.puts(s='')
-    Lolize.raw_write("#{s}\n")
+    # Lolize.raw_write("#{s}\n")
   end
   def self.print(s)
     Lolize.raw_write(s)
