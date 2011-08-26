@@ -4,7 +4,7 @@ module Lolize
   def self.write(s)
     s.lines.each_with_index do |line, index|
       lol_write(line)
-      raw_write("\n") if line=="\n"
+      raw_write("\n") if line.length>0 && line[-1].chr=="\n"
     end
   end
 
