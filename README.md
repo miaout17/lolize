@@ -27,8 +27,6 @@ If you try this:
 
 You will find that the last line won't be displayed forever.
 
-After some googling, I think it need 
-
 ## Caution
 
 * This is just a fun project
