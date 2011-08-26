@@ -10,7 +10,8 @@ module Lolize
       :spread => 8.0,
       :freq => 0.3
     }
-    Lol.println(s.dup, {}, @opts)
+    @opts[:os] += 1
+    Lol.send(:println, s.dup.inspect, {}, @opts)
   end
   def self.raw_write(s)
     $stdout.raw_write(s)
@@ -38,7 +39,6 @@ Lolize.lolize($stdout)
 Lolize.lolize($stderr)
 
 10.times do
-  # Lolize.write "a"*80
   puts "a"*80
 end
 
