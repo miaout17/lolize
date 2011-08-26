@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "lolize"
   s.version     = Lolize::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.authors     = ["miaout17"]
+  s.email       = ["miaout17@gmail.com"]
+  s.homepage    = "https://github.com/miaout17/lolize"
+  s.summary     = %q{Colorize your ruby stdout with Lolcat}
+  s.description = %q{Colorize your ruby stdout with Lolcat}
 
   s.rubyforge_project = "lolize"
 
