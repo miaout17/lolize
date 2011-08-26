@@ -1,0 +1,21 @@
+PATH
+  remote: .
+  specs:
+    lolize (0.0.1)
+      lolcat (= 42.0.99)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    lolcat (42.0.99)
+      paint (~> 0.8.3)
+      trollop (~> 1.16.2)
+    paint (0.8.3)
+    trollop (1.16.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  lolcat (= 42.0.99)
+  lolize!
