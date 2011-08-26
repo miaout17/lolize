@@ -2,6 +2,12 @@ require 'lolcat'
 
 module Lolize
   def self.write(s)
+    s.split.each_with_index do |line, index|
+      lol_write(s)
+    end
+  end
+
+  def self.lol_write(s)
     @opts ||= {
       :animate => false,
       :duration => 12,
@@ -11,7 +17,7 @@ module Lolize
       :freq => 0.3
     }
     @opts[:os] += 1
-    Lol.send(:println, s.dup.inspect, {}, @opts)
+    Lol.send(:println, s.dup, {}, @opts)
   end
   def self.raw_write(s)
     $stdout.raw_write(s)
