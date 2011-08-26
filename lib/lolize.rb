@@ -1,0 +1,3 @@
+module Lolize
+  # Your code goes here...
+end
