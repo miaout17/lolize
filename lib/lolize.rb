@@ -12,6 +12,9 @@ module Lolize
     }
     Lol.println(s, {}, @opts)
   end
+  def self.raw_write(s)
+    $stdout.raw_write(s)
+  end
   def self.lolize(output)
     class << output
       alias :raw_write :write
@@ -23,16 +26,20 @@ module Lolize
 end
 
 module Lol
-  # def self.puts
-  # end
-  # def self.print
-  # end
+  def self.puts(s='')
+    Lolize.raw_write("#{s}\n")
+  end
+  def self.print(s)
+    Lolize.raw_write(s)
+  end
 end
 
-# Lolize.lolize($stdout)
-# Lolize.lolize($stderr)
+Lolize.lolize($stdout)
+Lolize.lolize($stderr)
 
-Lolize.write "aa"*1000
+10.times do
+  Lolize.write "a"*80
+end
 
 exit 0
 
