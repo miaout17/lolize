@@ -44,9 +44,3 @@ end
 Lolize.lolize($stdout)
 Lolize.lolize($stderr)
 
-10.times do
-  puts "a"*80
-end
-
-exit 0
-
