@@ -1,5 +1,5 @@
 require 'lolize'
 
-Lolize::Colorizer.lolize($stdout)
-Lolize::Colorizer.lolize($stderr)
+Lolize.lolize($stdout)
+Lolize.lolize($stderr)
 

@@ -5,15 +5,6 @@ module Lolize
   class Colorizer
     include Singleton
 
-    def self.lolize(output)
-      class << output
-        alias :raw_write :write
-        def write(s)
-          ::Lolize::Colorizer.instance.write(s)
-        end
-      end
-    end
-
     def initialize
       @freq = 0.3
       @spread = 8.0
