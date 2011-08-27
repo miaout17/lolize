@@ -3,6 +3,8 @@ require 'paint'
 module Lolize
   class Colorizer
 
+    RAW_WRITE_METHOD = :write_without_lolize
+
     def self.instance
       @instance ||= Lolize::Colorizer.new
     end
@@ -46,7 +48,13 @@ module Lolize
     end
 
     def raw_write(s)
-      $stdout.raw_write(s)
+      if $stdout.respond_to?(RAW_WRITE_METHOD)
+        # if $stdout is hook
+        $stdout.send(RAW_WRITE_METHOD, s)
+      else
+        # $stdout is not hooked
+        $stdout.write(s)
+      end
     end
   end
 end
