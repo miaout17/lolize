@@ -49,7 +49,7 @@ module Lolize
 
     def raw_write(s)
       if $stdout.respond_to?(RAW_WRITE_METHOD)
-        # if $stdout is hook
+        # if $stdout is hooked
         $stdout.send(RAW_WRITE_METHOD, s)
       else
         # $stdout is not hooked
