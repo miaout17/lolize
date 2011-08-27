@@ -16,6 +16,8 @@ module Lolize
       @state = :normal
     end
 
+    # The algorithm is from lolcat (https://github.com/busyloop/lolcat)
+    # lolcat is released with WTFPL
     def rainbow
       red = Math.sin(@freq*@color + 0) * 127 + 128
       green = Math.sin(@freq*@color + 2*Math::PI/3) * 127 + 128
