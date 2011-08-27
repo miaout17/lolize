@@ -1,6 +1,6 @@
 module Lolize
   module Hooker
-    def lolize(output)
+    def lolize!(output)
       class << output
         alias :raw_write :write
         def write(s)
