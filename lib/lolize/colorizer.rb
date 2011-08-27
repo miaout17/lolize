@@ -1,9 +1,11 @@
 require 'paint'
-require 'singleton'
 
 module Lolize
   class Colorizer
-    include Singleton
+
+    def self.instance
+      @instance ||= Lolize::Colorizer.new
+    end
 
     def initialize
       @freq = 0.3
