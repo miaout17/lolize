@@ -8,6 +8,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     paint (0.8.3)
+    rake (0.9.2)
 
 PLATFORMS
   ruby
@@ -15,3 +16,4 @@ PLATFORMS
 DEPENDENCIES
   lolize!
   paint (~> 0.8.3)
+  rake
