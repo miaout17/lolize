@@ -23,7 +23,7 @@ For example, you can do this in your rails project:
 
 ![Rails with lolize](http://miaout17.github.com/lolize/lolize-rails.png)
 
-### Any Ruby, Anywhere
+### Any Ruby, anywhere
 
 Here is the snippet:
 
@@ -33,6 +33,14 @@ Here is the snippet:
 You can even do this in your compass `config.rb`:
 
 ![Compass watch with lolize](http://miaout17.github.com/lolize/lolize-compass.png)
+
+## Don't colorize everything please
+
+    gem 'lolize'
+    require 'lolize'
+    colorizer = Lolize::Colorizer.new
+    colorizer.write "Hello, World\n"*5
+    puts "I AM WHITE" # This is clean
 
 ## Why lolize
 
@@ -57,3 +65,4 @@ It seems hard to solve this problem, some platform-dependent C-extension is need
 ## License
 
 MIT License
+
