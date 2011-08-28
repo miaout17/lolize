@@ -11,6 +11,14 @@ The colorize algorithm is based on [lolcat](https://github.com/busyloop/lolcat).
   * It will slow your console output
   * If something gets wrong within output hook, the program might crash silently
 
+## Requirement
+
+* You need 256-color terminal for best experience.
+
+## Installation
+
+    gem install lolize
+
 ## How to lolize
 
 Just require `lolize/auto`. it will automatically hook your `$stdout` and `$stderr`. 
