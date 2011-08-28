@@ -4,16 +4,29 @@ Colorize your ruby output with rainbow :)
 
 The colorize algorithm is based on [lolcat](https://github.com/busyloop/lolcat).
 
+## Caution
+
+* This is just a fun project
+* Never use this in your production project!!!!
+  * It will slow your console output
+  * If something gets wrong within output hook, the program might crash silently
+
 ## How to lolize
 
-In your ruby code/irb:
+Just require `lolize/auto`, it will automatically hook your `$stdout` and `$stderr`. 
+
+### Bundler Gemfile
+
+For example, you can do this in your rails project: 
+
+    # Gemfile
+    gem 'lolize', :require => 'lolize/auto'
+
+### Any Ruby, Anywhere
 
     gem 'lolize'
     require 'lolize/auto'
 
-Bundler Gemfile:
-
-    gem 'lolize', :require => 'lolize/auto'
 
 ## Why lolize
 
@@ -27,11 +40,6 @@ If you try this:
 
 You will find that the last line won't be displayed forever.
 
-## Caution
-
-* This is just a fun project
-* If something gets wrong within output hook, the program might crash silently
-* Never use this in your production project!!!!
 
 ## License
 
